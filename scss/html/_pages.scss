@@ -1,0 +1,297 @@
+@import "../utilidades/extend";
+@import "../utilidades/mixin";
+@import "../utilidades/variables";
+
+/* font */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto:wght@100;900&display=swap');
+
+
+/* estilos generales */
+
+body {
+    /* se utiliza por ejemplo para colores generales, tipografias, tamanos generales... */
+    @extend %body;
+    
+}
+
+header {
+    background-color: $color-principal;
+    @include flex;
+    color: $color-body;
+    @extend %header;
+}
+
+.header-container {
+    @include flex-2(flex, space-between, center);
+}
+
+.logo {
+    @include flex-2(flex, none, center);
+}
+
+.logo img {
+    @include wyh ("", auto);
+}
+
+.logo-titulo {
+    margin-left: 20px;
+}
+
+
+header nav ul {
+    list-style: none;
+
+}
+
+header nav ul li {
+    @extend %headernavulli;
+}
+
+
+header nav ul li a {
+    text-decoration: none;
+    color: black;
+
+}
+
+main {
+    @include flex-2(flex, none, center);
+    flex-direction: column;
+
+}
+
+.mainhome{
+    display: grid;
+    padding: 0px
+}
+
+.titulo-lepen {
+    text-align: center;
+    
+}
+
+.lepen{
+    display: grid;
+    padding: 1rem;
+    row-gap: 3rem;
+    
+}
+
+
+.product {
+    @extend %product;
+}
+
+
+.boton-compra {
+    @extend %boton-compra;
+}
+
+footer {
+    @include flex;
+    @include footer;
+}
+
+.footerindex{
+    @include align;
+}
+
+.container__lepen {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px;
+}
+
+
+.tromen-1 {
+    @include align;
+}
+
+.tromen{
+    @extend %tromen;
+}
+
+  
+
+  
+.buscando{
+    @include margins ("", 50px);
+}
+
+.main1 {
+    @include flex;
+    @include wyh ("", 100vh);
+}
+  
+ 
+.buscando {
+    @include margins ("", 50px);
+    @include align;
+}
+.buscando h3 {
+    @include mensajes ("", 24px, $color-label);
+}
+  
+  
+.contacto {
+    @extend %contacto;
+}
+  
+  
+label {
+    @include mensajes (block, 16px, $color-label);
+    @include margins ("", 10px);
+}
+  
+// hola
+input,
+textarea {
+    @include contacto;
+}
+  
+  
+button[type="submit"] {
+    @extend %button;
+}
+  
+  
+button[type="submit"]:hover {
+    color: $color-successmessage;
+}
+  
+  
+.success-message {
+    @include mensajes ("", 16px, $color-successmessage);
+    @include margins (20px, "");
+}
+  
+  
+.error-message {
+    @include mensajes ("", 16px, $color-errormessage);
+    @include margins (20px, "");
+}
+
+  .imagen-con-texto {
+    position: relative;
+    @include wyh (100%, 500px);
+}
+  
+  .imagen-con-texto img {
+    @extend %imagen-con-texto;
+}
+  
+  .texto-superpuesto {
+    @extend %texto-superpuesto;
+    
+}
+
+.texto {
+    @include medidas(40%, none, none, none);
+}
+
+.mapa {
+    @include medidas(40%, none, none, none);
+}
+
+.main3 {
+    display: grid;
+    @include medidas(none, none, 20px, 1rem);
+    
+}
+  
+.s1 {
+    @include wyh (45%, "");
+    @include margins ("", 30px);
+}
+  
+.s2 {
+    @include wyh (100%, "");
+}
+   
+.tituloc {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+  
+.p1 {
+    @extend %p1;
+}
+  
+.videos {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+  
+.video-container {
+    @include flex;
+    flex-wrap: wrap;
+    
+}
+  
+.video {
+    margin: 20px;
+}
+  
+.maindireccion {
+    display: grid;
+    padding: 1rem;
+  }
+  
+.imagen img {
+    @include wyh (100%, auto);
+  }
+  
+.direccion {
+    background-color: #fff;
+    padding: 20px;
+  }
+  
+.direccion h2 {
+    @include margins(0px, none)
+  }
+  
+.direccion p {
+    @include margins(none, 10px);
+  }
+  
+.direccion a {
+    @extend %direcciona;
+  }
+  
+.contenido {
+    background-color: #fff;
+    padding: 20px;
+  }
+  
+.contenido h2 {
+    margin-top: 0;
+  }
+
+.social-icons{
+    @include mensajes (grid, "", "");
+}
+  
+footer{
+    @include align;
+}
+  
+@media screen and (min-width:1024px) {
+    .lepen{
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 50px;
+        column-gap: 50px;
+        
+    }
+    .maindireccion{
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 50px;
+        column-gap: 50px;
+    }
+    .main1{
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 50px;
+        column-gap: 50px;
+    }
+}
