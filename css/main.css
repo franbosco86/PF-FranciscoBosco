@@ -266,9 +266,14 @@ button[type="submit"]:hover {
   margin-top: "";
   margin-bottom: 30px; }
 
-.s2 {
-  width: 100%;
-  height: ""; }
+.s2 { 
+  width: 45%;
+  height: "";
+  margin-top: "";
+  margin-bottom: 30px; 
+  text-align: right;
+  margin-left: auto; }
+
 
 .tituloc {
   font-size: 32px;
@@ -287,6 +292,12 @@ button[type="submit"]:hover {
 
 .video {
   margin: 20px; }
+
+.video2{
+  margin: 20px;
+  margin-left: auto;
+  float: right;
+}
 
 .maindireccion {
   display: grid;
@@ -315,11 +326,14 @@ button[type="submit"]:hover {
 .contenido h2 {
   margin-top: 0; }
 
-.social-icons {
-  display: grid;
-  font-size: "";
-  color: ""; }
-
+  .social-icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 10px;
+    margin-bottom: 20px;
+  }
+ 
 footer {
   text-align: center; }
 
