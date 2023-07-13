@@ -294,4 +294,11 @@ footer{
         row-gap: 50px;
         column-gap: 50px;
     }
+    footer{
+        .container{
+            p{
+                margin-bottom: 0; 
+            }
+        }
+    }
 }
