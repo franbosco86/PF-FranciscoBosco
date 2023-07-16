@@ -124,6 +124,8 @@ body {
   /* se utiliza por ejemplo para colores generales, tipografias, tamanos generales... */
 }
 
+
+/* header y logo */
 header {
   background-color: grey;
   display: flex;
@@ -388,6 +390,9 @@ footer {
   text-align: center;
 }
 
+
+/* logrando las mq */
+
 @media screen and (min-width: 1024px) {
   .lepen {
     grid-template-columns: repeat(2, 1fr);
@@ -413,6 +418,8 @@ footer .container p {
   margin-bottom: 0;
 }
 
+
+
 @media screen and (max-width: 1024px) {
   .social-icons img {
     height: 30px;
@@ -420,6 +427,8 @@ footer .container p {
   }
 
 }
+
+
 
 @media (max-width: 767px) {
   .product {

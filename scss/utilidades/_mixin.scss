@@ -1,30 +1,30 @@
 // mixin con parametros 
-@mixin flex-2($display, $justify, $align){
+@mixin flex-2($display, $justify, $align) {
     display: $display;
     justify-content: $justify;
     align-items: $align;
 
 }
 
-@mixin medidas($width, $height, $margin, $padding){
+@mixin medidas($width, $height, $margin, $padding) {
     width: $width;
     height: $height;
     margin: $margin;
     padding: $padding;
 }
 
-@mixin margins($margin-top, $margin-bottom){
+@mixin margins($margin-top, $margin-bottom) {
     margin-top: $margin-top;
     margin-bottom: $margin-bottom;
 }
 
-@mixin mensajes($display, $font-size, $color){
+@mixin mensajes($display, $font-size, $color) {
     display: $display;
     font-size: $font-size;
     color: $color;
 }
 
-@mixin wyh($widht, $height){
+@mixin wyh($widht, $height) {
     width: $widht;
     height: $height;
 }
@@ -35,14 +35,14 @@
 
 // mixin sin parametros
 
-@mixin flex{
+@mixin flex {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 @mixin footer {
-    position: static; 
+    position: static;
     bottom: 0;
     width: 100%;
     height: 50px;
@@ -63,6 +63,6 @@
     box-sizing: border-box;
 }
 
-@mixin align{
+@mixin align {
     text-align: center;
 }

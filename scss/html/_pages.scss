@@ -12,7 +12,7 @@
 body {
     /* se utiliza por ejemplo para colores generales, tipografias, tamanos generales... */
     @extend %body;
-    
+
 }
 
 header {
@@ -61,21 +61,21 @@ main {
 
 }
 
-.mainhome{
+.mainhome {
     display: grid;
     padding: 0px
 }
 
 .titulo-lepen {
     text-align: center;
-    
+
 }
 
-.lepen{
+.lepen {
     display: grid;
     padding: 1rem;
     row-gap: 3rem;
-    
+
 }
 
 
@@ -93,7 +93,7 @@ footer {
     @include footer;
 }
 
-.footerindex{
+.footerindex {
     @include align;
 }
 
@@ -108,14 +108,14 @@ footer {
     @include align;
 }
 
-.tromen{
+.tromen {
     @extend %tromen;
 }
 
-  
 
-  
-.buscando{
+
+
+.buscando {
     @include margins ("", 50px);
 }
 
@@ -123,67 +123,68 @@ footer {
     @include flex;
     @include wyh ("", 100vh);
 }
-  
- 
+
+
 .buscando {
     @include margins ("", 50px);
     @include align;
 }
+
 .buscando h3 {
     @include mensajes ("", 24px, $color-label);
 }
-  
-  
+
+
 .contacto {
     @extend %contacto;
 }
-  
-  
+
+
 label {
     @include mensajes (block, 16px, $color-label);
     @include margins ("", 10px);
 }
-  
+
 // hola
 input,
 textarea {
     @include contacto;
 }
-  
-  
+
+
 button[type="submit"] {
     @extend %button;
 }
-  
-  
+
+
 button[type="submit"]:hover {
     color: $color-successmessage;
 }
-  
-  
+
+
 .success-message {
     @include mensajes ("", 16px, $color-successmessage);
     @include margins (20px, "");
 }
-  
-  
+
+
 .error-message {
     @include mensajes ("", 16px, $color-errormessage);
     @include margins (20px, "");
 }
 
-  .imagen-con-texto {
+.imagen-con-texto {
     position: relative;
     @include wyh (100%, 500px);
 }
-  
-  .imagen-con-texto img {
+
+.imagen-con-texto img {
     @extend %imagen-con-texto;
 }
-  
-  .texto-superpuesto {
+
+.texto-superpuesto {
     @extend %texto-superpuesto;
-    
+
 }
 
 .texto {
@@ -197,107 +198,110 @@ button[type="submit"]:hover {
 .main3 {
     display: grid;
     @include medidas(none, none, 20px, 1rem);
-    
+
 }
-  
+
 .s1 {
     @include wyh (45%, "");
     @include margins ("", 30px);
 }
-  
+
 .s2 {
     @include wyh (100%, "");
 }
-   
+
 .tituloc {
     font-size: 32px;
     margin-bottom: 20px;
 }
-  
+
 .p1 {
     @extend %p1;
 }
-  
+
 .videos {
     width: 100%;
     text-align: center;
     margin-bottom: 20px;
 }
-  
+
 .video-container {
     @include flex;
     flex-wrap: wrap;
-    
+
 }
-  
+
 .video {
     margin: 20px;
 }
-  
+
 .maindireccion {
     display: grid;
     padding: 1rem;
-  }
-  
+}
+
 .imagen img {
     @include wyh (100%, auto);
-  }
-  
+}
+
 .direccion {
     background-color: #fff;
     padding: 20px;
-  }
-  
+}
+
 .direccion h2 {
     @include margins(0px, none)
-  }
-  
+}
+
 .direccion p {
     @include margins(none, 10px);
-  }
-  
+}
+
 .direccion a {
     @extend %direcciona;
-  }
-  
+}
+
 .contenido {
     background-color: #fff;
     padding: 20px;
-  }
-  
+}
+
 .contenido h2 {
     margin-top: 0;
-  }
+}
 
-.social-icons{
+.social-icons {
     @include mensajes (grid, "", "");
 }
-  
-footer{
+
+footer {
     @include align;
 }
-  
+
 @media screen and (min-width:1024px) {
-    .lepen{
+    .lepen {
         grid-template-columns: repeat(2, 1fr);
         row-gap: 50px;
         column-gap: 50px;
-        
+
     }
-    .maindireccion{
-        grid-template-columns: repeat(2, 1fr);
-        row-gap: 50px;
-        column-gap: 50px;
-    }
-    .main1{
+
+    .maindireccion {
         grid-template-columns: repeat(2, 1fr);
         row-gap: 50px;
         column-gap: 50px;
     }
-    footer{
-        .container{
-            p{
-                margin-bottom: 0; 
+
+    .main1 {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 50px;
+        column-gap: 50px;
+    }
+
+    footer {
+        .container {
+            p {
+                margin-bottom: 0;
             }
         }
     }
