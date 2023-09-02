@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejemplo de Fetch API</title>
+</head>
+<body>
+  <h1>Datos de la API:</h1>
+  <p id="resultado">Esperando datos...</p>
+
+  <script>
+
+const apiUrl = 'https://jsonplaceholder.typicode.com/posts/1';
+
+
+const resultadoElement = document.getElementById('resultado');
+
+
+fetch(apiUrl)
+    .then(response => {
+    if (!response.ok) {
+        throw new Error('La solicitud no fue exitosa');
+        }
+        
+    return response.json();
+      })
+    .then(data => {
+        resultadoElement.textContent = `Título: ${data.title}`;
+    })
+    .catch(error => {
+        resultadoElement.textContent = `Error: ${error.message}`;
+      });
+  </script>
+</body>
+</html>

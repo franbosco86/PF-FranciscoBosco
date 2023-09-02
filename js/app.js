@@ -1,11 +1,23 @@
 const cartItemsElement = document.getElementById("cart-items");
 const cartTotalElement = document.getElementById("cart-total");
 const checkoutButton = document.getElementById("checkout-btn");
-
-
 let cartItems = [];
 
 function addToCart(product) {
+    Toastify({
+        text: "Producto Agregado",
+        duration: 3000,
+        destination: "https://github.com/apvarun/toastify-js",
+        newWindow: true,
+        close: true,
+        gravity: "top", // `top` or `bottom`
+        position: "right", // `left`, `center` or `right`
+        stopOnFocus: true, // Prevents dismissing of toast on hover
+        style: {
+          background: "linear-gradient(to right, #00b09b, #96c93d)",
+        },
+        onClick: function(){} // Callback after click
+      }).showToast();
     const existingItem = cartItems.find(item => item.name === product.name);
     
     if (existingItem) {
@@ -33,6 +45,8 @@ function updateCart() {
             <button class="remove-btn" data-index="${index}">Remove</button>`;
         cartItemsElement.appendChild(item);
         total += product.price * product.quantity;
+
+        
     });
 
     cartTotalElement.innerText = total.toFixed(2);
@@ -45,7 +59,6 @@ function updateCart() {
         });
     });
 }
-
 
 const buyButtons = document.querySelectorAll(".boton-compra");
 buyButtons.forEach((button, index) => {
@@ -67,10 +80,30 @@ checkoutButton.addEventListener("click", () => {
     }
 });
 
+// URL de la API
+const apiUrl = 'https://jsonplaceholder.typicode.com/posts/1';
 
 
+const resultadoElement = document.getElementById('resultado');
 
 
+fetch(apiUrl)
+  .then(response => {
+   
+    if (!response.ok) {
+      throw new Error('La solicitud no fue exitosa');
+    }
+    
+    
+    return response.json();
+  })
+  .then(data => {
+    
+    resultadoElement.textContent = `Título: ${data.title}`;
+  })
+  .catch(error => {
+    
+    resultadoElement.textContent = `Error: ${error.message}`;
+  });
 
-
-
+  
